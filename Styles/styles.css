@@ -1,0 +1,143 @@
+body{
+	box-sizing: border-box;
+}
+
+header{
+	background-color: #f8f9fa;	
+}
+
+.nav-logo{
+	height: 50px;
+	width: 50px;
+}
+
+@media (min-width: 992px){
+	nav{
+		min-height: 123px;
+		vertical-align: text-bottom;
+	}
+
+	.carousel, .slide{
+		background-color:#c3d9c5;
+	}
+
+	.carousel-inner{
+		max-height: 600px !important;
+		max-width: 1140px !important;
+		display: block;
+		margin: auto;
+	}
+}
+
+@media (min-width: 1134px){
+	.fac-card{
+		width: 30%;
+		min-height: 290px;
+	}
+}
+
+@media (max-width: 1133px){
+	.fac-card{
+		width: 45%;
+		min-height: 300px;
+	}
+}
+
+
+@media (max-width: 768px){
+	.fac-card{
+		width: 100%;
+		min-height: 200px;
+	}
+
+	.fac-card-back{
+		font-size: 0.7em !important;
+	}
+
+	.main-title{
+		font-size: 1.5em !important;
+	}
+}
+@media (max-width: 992px){
+	header .container{
+		margin: 5px;
+		max-width: none;
+	}
+
+	.navbar-brand, .nav-item{
+		position: relative;
+		margin-left: auto;
+		margin-right: auto; 
+	}
+}
+
+
+header .container{
+	padding: 0px;
+}
+
+
+/*CSS for cards*/
+main .container .row{
+	justify-content: space-around;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+main .no-margin{
+	margin: 0px !important;
+	max-width: none !important;
+}
+
+
+
+.fac-card{
+	margin-top: 40px;
+	background-color: transparent;
+	perspective: 1000px;
+}
+
+.fac-card-front, .fac-card-back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.fac-card-inner{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.fac-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.fac-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.fac-images{
+	max-height: 100%;
+	max-width: 100%;
+}
+
+.fac-card:hover .fac-card-inner {
+  transform: rotateY(180deg);
+}
+
+.main-title{
+	font-size: 3em;
+	text-align: center;
+}
