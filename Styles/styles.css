@@ -1,143 +1,405 @@
+/* Throughout the body CSS */
+
 body{
 	box-sizing: border-box;
 }
 
-header{
-	background-color: #f8f9fa;	
+
+.container .row{
+	justify-content: center;
 }
 
-.nav-logo{
-	height: 50px;
-	width: 50px;
+
+/* CSS for Jumbotron and Moto */
+#hero-container{
+	background-image: url("./../Assets/hero-image.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	margin-bottom: 0px;
+}
+
+
+.appointment{
+	border-radius: 15px;
+	border: none;
+	background-color: #fff;
+	color: #000;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 13px;
+	padding-right: 13px;
+	opacity: 1;
+	transition-duration: 0.2s;
+}
+
+.appointment:hover, .appointment:active{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color: #eee;
+}
+
+.appointed:visited{
+	transform: none;
+}
+
+#hero-content{
+		width: 35%;
+		max-width: 500px;
+		position: absolute;
+		top: 35%;
+		right: 20%;
+		background-color: #25c1fa;
+		opacity: 0.9;
+		color: #fff;
+		text-align: center;
+		padding: 10px;
+}
+
+
+/* CSS for the incomprehensible rectangles */
+.ad-columns{
+	height: 150px;
+	color: white;
+}
+
+#col-1{
+	background-color: #43bcf0;
+}
+
+#col-2{
+	background-color: #f57b42;
+}
+
+#col-3{
+	background-color: #666;
+}
+
+/* ad class is used to adjust the position lift caused by the three rectangles above */
+.ad{
+	position: relative;
+	bottom: 50px;
+}
+
+
+/* Using 9 grids for content throughout the webpage */
+.col-md-9{
+	padding: 0px !important;
+	text-align: justify;
+}
+
+/* CSS for the About US section */
+.about-head{
+	text-align: center;
+}
+
+
+
+/* CSS for What Makes Us Different section */
+.different-page{
+	background-color: #dce9f5;
+	padding-bottom: 30px;
+}
+
+
+h5.different-head{
+	margin-top: 40px;
+	color: blue;
+}
+
+.different-head{
+	margin-top: 10px;
+	text-align: center;
+}
+
+
+.col-md-9 .row .col-lg-4{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.tiles-head{
+	color: blue;
+}
+
+.tiles-icon{
+	height: 25px;
+	width: 	27px;
+}
+
+.tiles-desc{
+	padding-left: 27px;
+}
+
+/* CSS for Testimonials section */
+.test-head{
+	margin-top: 30px;
+	color: #222;
+}
+
+.testimonial-container .row{
+	margin: 0px;
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.testimonial-container .row::-webkit-scrollbar{
+	display: none;
+}
+
+.testimonial{
+	padding: 5px;
+}
+
+.add-padding{
+	height: 320px;
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	border: 1px solid grey;
+	padding-top: 20px;
+	font-size: 0.85em;
+	padding: 15px;
+}
+
+.add-padding::-webkit-scrollbar{
+	display: none;
+}
+
+
+/* CSS for Doctors section*/
+h6.doctors-head{
+	margin-top: 25px;
+}
+
+h3.doctors-head{
+	margin-bottom: 20px;
+}
+
+.doctors .row{
+	justify-content: space-between;
+	margin: 0px;
+}
+
+.doctor-profile{
+	display: inline-block;
+	width: 22.5%;
+	border: 2px solid grey;
+	padding-top: 10px;
+	line-height: 7px;
+	margin-bottom: 10px;
+}
+
+.doctor-image{
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+
+/* CSS for Contact Us section */
+.contact-us{
+	background-color: #5b58f5;
+	color: white;
+	height: 400px;
+}
+
+.contact-head{
+	text-align: center;
+	margin-top: 60px;
+}
+
+.form-iframe{
+	border: 2px solid grey;
+	background-color: white;
+	position: absolute;
+	height: 350px;
+	width: 450px;
+	left: 25%;
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	margin-bottom: 10px;
+}
+
+iframe::-webkit-scrollbar{
+	display: none;
+}
+
+.form-iframe::-webkit-scrollbar{
+	display: none;
+}
+
+/* Media Queries for classes above */
+@media (min-width: 1200px){
+	.hero-moto{
+		font-size: 2em;
+	}
+
+	.about-image{
+		display: inline-block;
+		float: left;
+		height: 500px;
+		margin-left: -47%;
+	}
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px){
+	.hero-moto{
+		font-size: 1.4em;
+	}
+
+	.about-article{
+		padding-left: 53%;
+		margin-top: 10px;
+	}
 }
 
 @media (min-width: 992px){
-	nav{
-		min-height: 123px;
-		vertical-align: text-bottom;
+	#hero-container{
+		height: 550px;
 	}
 
-	.carousel, .slide{
-		background-color:#c3d9c5;
+	.navbar-placeholder{
+		height: 150px;
 	}
 
-	.carousel-inner{
-		max-height: 600px !important;
-		max-width: 1140px !important;
-		display: block;
-		margin: auto;
+	.about-image{
+		display: inline-block;
+		height: 430px;
+		float: left;
+		margin-left: -50%;
+	}
+
+	.about-article{
+		padding-left: 51%;
+		font-size: 0.9em;
+	}
+
+	.form-iframe{
+		left: 17.5%;
 	}
 }
 
-@media (min-width: 1134px){
-	.fac-card{
-		width: 30%;
-		min-height: 290px;
+@media (min-width: 1200px){
+	.about-image{
+		display: inline-block;
+		float: left;
+		height: 500px;
+		margin-left: -47%;
+	}
+
+	.about-article{
+		padding-left: 55%;
+		margin-top: 10px;
+	}
+
+	.form-iframe{
+		left: 25%;
 	}
 }
 
-@media (max-width: 1133px){
-	.fac-card{
+@media (min-width: 768px) and (max-width: 991px){
+	#hero-container{
+		height: 350px;
+	}
+
+	.navbar-placeholder{
+		height: 150px;
+	}
+
+	.ad-columns{
+		height: 120px !important;
+	}
+
+	.ad{
+		bottom: 25px !important;
+	}
+
+	.about-image{
+		max-width: 100%;
+	}
+
+	.doctor-profile{
 		width: 45%;
-		min-height: 300px;
+	}
+
+	.form-iframe{
+		left: 8.25%;
 	}
 }
 
-
-@media (max-width: 768px){
-	.fac-card{
-		width: 100%;
-		min-height: 200px;
+@media (max-width: 767px){
+	#hero-container{
+		height: 200px;
 	}
 
-	.fac-card-back{
-		font-size: 0.7em !important;
+	#hero-content{
+		width: 76%;
+		position: absolute;
+		left: 12%;
+		top: 10%;
 	}
 
-	.main-title{
-		font-size: 1.5em !important;
-	}
-}
-@media (max-width: 992px){
-	header .container{
-		margin: 5px;
-		max-width: none;
+	.appointment{
+		font-size: 0.85em;
 	}
 
-	.navbar-brand, .nav-item{
-		position: relative;
-		margin-left: auto;
-		margin-right: auto; 
+	.navbar-placeholder{
+		height: 100px;
 	}
-}
 
+	.ad-columns{
+		width: 33%;
+		height: 90px !important;
+	}
 
-header .container{
-	padding: 0px;
-}
+	.ad{
+		bottom: 0px !important;
+	}
 
+	.about-image{
+		max-width: 100%;
+	}
 
-/*CSS for cards*/
-main .container .row{
-	justify-content: space-around;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	margin-right: 20px;
-	margin-left: 20px;
-}
+	.about-article{
+		margin-top: 10px;
+		font-size: 0.8em;
+	}
 
-main .no-margin{
-	margin: 0px !important;
-	max-width: none !important;
-}
+	.tiles-desc{
+		padding-right: 10px;
+	}
 
+	.different-page{
+		padding-bottom: 20px;
+	}
 
+	.test-head{
+		text-align: center;
+	}
 
-.fac-card{
-	margin-top: 40px;
-	background-color: transparent;
-	perspective: 1000px;
-}
+	.add-padding{
+		height: 280px;
+	}
 
-.fac-card-front, .fac-card-back{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
+	.doctor-profile{
+		width: 45%;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
 
-.fac-card-inner{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	transition: transform 0.6s;
-	transform-style: preserve-3d;
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
+	.contact-head{
+		margin-top: 25px;
+	}
 
-.fac-card-front {
-  background-color: #bbb;
-  color: black;
-}
+	.contact-us{
+		height: 100%;
+	}
 
-.fac-card-back {
-  background-color: #2980b9;
-  color: white;
-  transform: rotateY(180deg);
-}
-
-.fac-images{
-	max-height: 100%;
-	max-width: 100%;
-}
-
-.fac-card:hover .fac-card-inner {
-  transform: rotateY(180deg);
-}
-
-.main-title{
-	font-size: 3em;
-	text-align: center;
+	.form-iframe{
+		display: none;
+	}
 }
